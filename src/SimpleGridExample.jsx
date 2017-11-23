@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {AgGridReact} from "ag-grid-react";
+import {AgGridReact, AgGridColumn} from "ag-grid-react";
 
 export default class extends Component {
     constructor(props) {
@@ -49,7 +49,12 @@ export default class extends Component {
                     rowData={this.state.rowData}
 
                     // events
-                    onGridReady={this.onGridReady}>
+                    onGridReady={this.onGridReady}
+                    
+                    //add filter& sorting
+                    enableSorting
+                    enableFilter
+                    >                  
                 </AgGridReact>
             </div>
         )
